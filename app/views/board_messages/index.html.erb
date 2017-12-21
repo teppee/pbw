@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Message Board</h1>
+<%= render 'form', board_message: @board_message %>
+<p><%= link_to 'go home >>', controller: :characters %></p>
+<hr>
+
+<h2>※Posted Messages.</h2>
+<table width="90%">
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th width="150px">Character</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @board_messages.each do |board_message| %>
+      <tr>
+        <td><%= board_message.content %></td>
+        <td><%= link_to board_message.character.name, controller: :characters, action: :show, id:board_message.character_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div><%= paginate @board_messages %></div>

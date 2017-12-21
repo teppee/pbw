@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Name:</th>
+    <td><%= @character.name %></td>
+  </tr>
+
+  <tr>
+    <th>Age:</th>
+    <td><%= @character.age %></td>
+  </tr>
+
+  <tr>
+    <th>Sex:</th>
+    <td><%= @character.sex %></td>
+  </tr>
+
+  <tr>
+    <th>Race:</th>
+    <td><%= @character.race %></td>
+  </tr>
+
+  <tr>
+    <th>Memo:</th>
+    <td><%= @character.memo %></td>
+  </tr>
+</table>
+<hr>
+<%= link_to '<<Back', controller: :board_messages %>

@@ -1,0 +1,7 @@
+<h1>User Home</h1>
+<h2><%= @character.user.email %>　さんの設定</h2>
+
+<%= render 'form', character: @character %>
+<hr>
+<p><%= link_to '<< go back', controller: :board_messages %></p>
+<hr>
